@@ -1,0 +1,142 @@
+@font-face{
+    font-family: "bungee";
+    src: url("../assets/fonts/bungee/Bungee-Regular.ttf") format("truetype");
+
+}
+:root{
+    --background-paginaWeb: #010D52;
+    --background-setcion: #00071A;
+    --background-footer: #121212 ;
+    --color-footer:#C4C4C4;
+    --font-global: "bungee" ;
+    --color-global:#FFB700;
+    --background-button: #E6F4FF;
+    --background-tablas:#010D52;
+}
+*{
+    color: var(--color-global);
+    box-sizing: border-box; 
+    padding: 0;
+    margin: 0;
+}
+body{
+    height: 100vh;
+    font-family: var(--font-global);
+    background-image: linear-gradient(to top, var(--background-paginaWeb), #000000);}
+main{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 55px;
+    padding: 8%;
+    padding-top:3%;
+    gap: 5%;
+    height: 95vh;
+    #registro-equipo{
+        background-color: var(--background-setcion);
+        border-radius: 20px;
+        width: 100%;
+        height: 82vh;
+        padding: 4%;
+        gap: 10%;
+        #logo-betplay{
+            display: block;
+            margin: auto;
+            background-color: var(--background-setcion);
+            width: 25%;
+            height: 30vh;
+            margin-bottom: 4%;
+        }
+        #datos-equipo{
+            border-radius: 10px;
+            padding: 4%;
+            height: 40vh;
+            background-color: var(--background-tablas) ;
+            box-shadow: 0 4px 12px #00040F;            .instruccion-dato{
+                margin-right: 2%;
+            }
+            .inputs{
+                margin-bottom: 4% ;
+            }
+            #name-equipo{
+                background-color: var(--background-button);
+                color: black;
+                border-radius: 6px;
+                margin-top: 3%;
+                width: 50%;
+                height: 4vh;
+                border: none;
+                font-family: var(--font-global);
+            }
+            #name-equipo:hover{
+                border: none;
+            }
+            #add-logo::file-selector-button{
+                background-color: var(--background-button);
+                border: none;
+                width: 60%;
+                height: 4vh;
+                border-radius: 10px;
+                margin-left: 10%;
+                font-family: var(--font-global);
+            }
+            #box-button-registrar{
+                display: flex;
+                justify-content: center;
+                margin-top: 5%;
+                #button-registrar{
+                    background-color: var(--background-button);
+                    width: 40%;
+                    height: 5vh;
+                    border: none;
+                    border-radius: 10px;
+                    font-family: var(--font-global);
+                }
+            }
+        }
+    }
+    #info-equipo{
+        background-color: var(--background-setcion);
+        width: 100%;
+        text-align: center;
+        padding: 4%;
+        border-radius: 20px;
+        #tabla-equipos{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(1, 1fr);
+            margin-top: 4%;
+            #equipo{
+                border-right: #000000 solid 2px;
+                border-bottom-left-radius: 20px;
+                border-top-left-radius: 20px;
+            }
+            #escudo-equipo{
+                border-bottom-right-radius: 20px;
+                border-top-right-radius: 20px;
+            }
+            .info-tabla{
+                background-color: var(--background-tablas);
+                box-shadow: 0 4px 12px #00040F;
+                height: 45vh;
+                h3{
+                    border-bottom: 2px solid #000000;
+                    margin-bottom: 2%;
+                }
+            }
+        }
+    }
+}
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+    color: white;
+    background-color: var(--background-footer);
+    height: 5vh;
+    p{
+        color: var(--color-footer);
+    }
+}
+

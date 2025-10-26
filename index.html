@@ -9,18 +9,28 @@
     <body>
         <main>
             <section id="registro-equipo">
-                <img src="./assets/img/icons/liga-betplay-2020-seeklogo.png" alt="Logo de la liga BetPlay">
+                <img id="logo-betplay" src="./assets/img/icons/liga-betplay-2020-seeklogo.png" alt="Logo de la liga BetPlay">
                 <div id="datos-equipo">
                     <strong class="instruccion-dato">Ingresar Nombre</strong>
-                    <input type="text" placeholder="Nombre del Equipo">
+                    <input id="name-equipo" class="inputs" type="text" placeholder="Nombre del Equipo">
                     <br>
                     <strong class="instruccion-dato">Ingresar Logo</strong>
-                    <input type="file" name="Logo Equipo">
+                    <input id="add-logo" class="inputs" type="file" name="Logo Equipo">
+                    <div id="box-button-registrar">
+                        <input id="button-registrar" type="button" value="Registrar Equipo">
+                    </div>
                 </div>
             </section>
             <section id="info-equipo">
-                <div id="equipo"></div>
-                <div id="escudo-equipo"></div>
+                <h2 id="title-tabla">Informacion de los Equipos</h2>
+                <div id="tabla-equipos">
+                    <div id="equipo" class="info-tabla">
+                        <h3>Equipos</h3>
+                    </div>
+                    <div id="escudo-equipo" class="info-tabla">
+                        <h3>Escudos</h3>    
+                    </div>
+                </div>
             </section>
         </main>
         <footer>

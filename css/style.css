@@ -70,6 +70,7 @@ main{
             }
             #name-equipo:hover{
                 border: none;
+                opacity: 0.8;
             }
             #add-logo::file-selector-button{
                 background-color: var(--background-button);
@@ -79,6 +80,10 @@ main{
                 border-radius: 10px;
                 margin-left: 10%;
                 font-family: var(--font-global);
+                cursor: pointer;
+            }
+            #add-logo:hover{
+               opacity: 0.8;;
             }
             #box-button-registrar{
                 display: flex;
@@ -92,6 +97,9 @@ main{
                     border-radius: 10px;
                     font-family: var(--font-global);
                 }
+                #button-registrar:hover{
+                    opacity: 0.8;
+                }
             }
         }
     }
@@ -102,14 +110,21 @@ main{
         padding: 4%;
         border-radius: 20px;
         #tabla-equipos{
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(1, 1fr);
-            margin-top: 4%;
+            /* display: grid; */
+            /* grid-template-columns: repeat(2, 1fr); */
+            /* grid-template-rows: repeat(1, 1fr); */
+            /* margin-top: 4%; */
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
             #equipo{
                 border-right: #000000 solid 2px;
                 border-bottom-left-radius: 20px;
                 border-top-left-radius: 20px;
+                #lista-equipos p {
+                    margin: 8px 0;
+                    font-weight: bold;
+                }
             }
             #escudo-equipo{
                 border-bottom-right-radius: 20px;
@@ -118,15 +133,84 @@ main{
             .info-tabla{
                 background-color: var(--background-tablas);
                 box-shadow: 0 4px 12px #00040F;
+                width: 100%;
                 height: 45vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                color: #fff;
                 h3{
                     border-bottom: 2px solid #000000;
                     margin-bottom: 2%;
+                    width: 100%;
                 }
             }
         }
     }
 }
+
+
+#tabla-equipos {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 10%;
+}
+
+#equipo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4.5%;
+}
+
+#escudo-equipo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15%;
+}
+
+.botones-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.botones-container button {
+    background: #1a1a1a;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.botones-container button:hover {
+    background: #2d2d2d;
+}
+
+.logo-equipo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #fff;
+}
+
+.name-registrado {
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+
 footer{
     display: flex;
     align-items: center;
